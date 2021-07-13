@@ -1,25 +1,28 @@
 package Pack1;
 import java.util.*;
-public class File1 {
-	public static void main(String[] args) {
-		int n , e_sum =0, o_sum =0;
-		Scanner obj = new Scanner(System.in);
-		System.out.println("Enter Array size:");
-		n = obj.nextInt(); // 5
-		int a[] = new int[n];
-		
-		//input 5 values
-		for(int i =0; i< n; i++)
-		{
-			a[i] = obj.nextInt(); // 1 2 3 4 5
-		}
-		for(int i=0; i < n; i++)
-		{
-			if(a[i]%2==0 && i%2==0)
-				e_sum = e_sum+a[i];
-			else if(a[i]%2==1 && i%2 ==1)
-				o_sum = o_sum + a[i];
-		}
-		System.out.println(e_sum+ " "+o_sum);	
+public class Rotated_String {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("enter 2 strings:");
+	String s1 = sc.next();
+	String s2 = sc.next();
+	// step1
+	if (s1.length() != s2.length())
+	{
+		System.out.println("No");		
 	}
-}
+	else
+	{
+		//step2
+		String s3 = s1 + s1;	
+		//step3
+		if(s3.contains(s2))
+		{
+			System.out.println("Yes");	
+		}
+		else
+		{
+			System.out.println("No");	
+		}
+	}
+ }
